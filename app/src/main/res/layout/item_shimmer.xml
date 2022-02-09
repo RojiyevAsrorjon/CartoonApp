@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#3C3E44"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="12dp"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#CCCCCC"
+            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/imageUrlShimmer"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="#fff"
+            app:layout_constraintLeft_toRightOf="@id/imageUrlShimmer"
+            android:layout_marginStart="8dp"
+            android:background="#CCCCCC"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/name"
+            android:text="                               "/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            app:layout_constraintLeft_toRightOf="@id/imageUrlShimmer"
+            app:layout_constraintTop_toTopOf="@id/status"
+            app:layout_constraintBottom_toBottomOf="@id/status"
+            android:id="@+id/statusIcon"
+            android:background="#CCCCCC"
+            android:layout_marginStart="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#00FFFFFF"
+            android:background="#CCCCCC"
+            app:layout_constraintLeft_toRightOf="@id/statusIcon"
+            android:layout_marginStart="4dp"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            android:layout_marginTop="2dp"
+            android:id="@+id/status"
+            android:text="Alive"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#00FFFFFF"
+            app:layout_constraintLeft_toRightOf="@id/status"
+            android:layout_marginStart="2dp"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            android:layout_marginTop="4dp"
+            android:id="@+id/line"
+            android:text="-"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#00FFFFFF"
+            app:layout_constraintLeft_toRightOf="@id/line"
+            android:layout_marginStart="2dp"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            android:layout_marginTop="2dp"
+            android:id="@+id/species"
+            android:background="#CCCCCC"
+            android:text="Human"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:background="#CCCCCC"
+            android:textColor="#009E9E87"
+            app:layout_constraintLeft_toRightOf="@id/imageUrlShimmer"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/lastPlace"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:id="@+id/lastKnownText"
+            android:layout_marginBottom="1dp"
+            android:text="Last known location:"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#00FFFFFF"
+            android:background="#CCCCCC"
+            android:layout_marginTop="1dp"
+            app:layout_constraintLeft_toRightOf="@id/imageUrlShimmer"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/lastKnownText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/lastPlace"
+            android:text="Earth (Replacement Dimension)"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#00FFFFFF"
+            android:background="#CCCCCC"
+            android:layout_marginTop="1dp"
+            app:layout_constraintLeft_toRightOf="@id/imageUrlShimmer"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/firstPlace"
+            android:layout_marginBottom="8dp"
+            android:text="Pilot"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#009E9E87"
+            android:background="#CCCCCC"
+            app:layout_constraintLeft_toRightOf="@id/imageUrlShimmer"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@id/firstPlace"
+            app:layout_goneMarginBottom="2dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:id="@+id/firstKnownText"
+            android:layout_marginBottom="1dp"
+            android:text="First seen in:"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
